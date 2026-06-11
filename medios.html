@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotos y Videos - Galería</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="contenedor contenedor-header">
+            <div class="barra">
+                <a href="index.html">
+                    <img src="img/logo_lithium.svg" alt="Logo LITHIUM">
+                </a>
+                <div class="mobile-menu">
+                    <a href="#navegacion">
+                        <img src="img/barras.svg" alt="icono menu">
+                    </a>
+                </div>
+                <nav id="navegacion" class="navegacion">
+                    <a href="index.html">Inicio</a>
+                    <a href="medios.html">Fotos y Videos</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="redes.html">Redes Sociales</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="contenedor seccion">
+        <h1 class="titulo-vintage centrar-texto">Galería de Fotos y Videos</h1>
+        <p class="subtitulo-vintage centrar-texto">Revive los mejores momentos de nuestra promoción</p>
+
+        <!-- Filtros -->
+        <div class="filtros-galeria">
+            <button class="filtro-btn activo" data-filter="todos">Todos</button>
+            <button class="filtro-btn" data-filter="eventos">Eventos</button>
+            <button class="filtro-btn" data-filter="viajes">Viajes</button>
+            <button class="filtro-btn" data-filter="convivios">Convivios</button>
+            <button class="filtro-btn" data-filter="videos">Videos</button>
+        </div>
+
+        <!-- Galería Masonry -->
+        <div class="galeria-masonry">
+            <!-- Item 1 -->
+            <div class="item-galeria todos eventos">
+                <div class="imagen-galeria">
+                    <img src="img/dia_de_la_mujer_grupal.jpg" alt="Evento de celebración">
+                    <div class="overlay-galeria">
+                        <span class="icono-lupa">🔍</span>
+                    </div>
+                </div>
+                <div class="info-galeria">
+                    <h3>Celebración Especial</h3>
+                    <p class="fecha-galeria">Junio 2024</p>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="item-galeria todos viajes">
+                <div class="imagen-galeria">
+                    <img src="img/dia_de_la_mujer_grupal.jpg" alt="Viaje cultural">
+                    <div class="overlay-galeria">
+                        <span class="icono-lupa">🔍</span>
+                    </div>
+                </div>
+                <div class="info-galeria">
+                    <h3>Aventura Cultural</h3>
+                    <p class="fecha-galeria">Mayo 2024</p>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="item-galeria todos convivios">
+                <div class="imagen-galeria">
+                    <img src="img/dia_de_la_mujer_grupal.jpg" alt="Noche de convivio">
+                    <div class="overlay-galeria">
+                        <span class="icono-lupa">🔍</span>
+                    </div>
+                </div>
+                <div class="info-galeria">
+                    <h3>Noche Memorable</h3>
+                    <p class="fecha-galeria">Abril 2024</p>
+                </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="item-galeria todos videos">
+                <div class="imagen-galeria video-galeria">
+                    <img src="img/dia_de_la_mujer_grupal.jpg" alt="Video recopilación">
+                    <div class="play-button">▶</div>
+                    <div class="overlay-galeria">
+                        <span class="icono-lupa">▶</span>
+                    </div>
+                </div>
+                <div class="info-galeria">
+                    <h3>Recopilación del Año</h3>
+                    <p class="fecha-galeria">Video 5:32</p>
+                </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="item-galeria todos eventos">
+                <div class="imagen-galeria">
+                    <img src="img/dia_de_la_mujer_grupal.jpg" alt="Evento escolar">
+                    <div class="overlay-galeria">
+                        <span class="icono-lupa">🔍</span>
+                    </div>
+                </div>
+                <div class="info-galeria">
+                    <h3>Acto Académico</h3>
+                    <p class="fecha-galeria">Marzo 2024</p>
+                </div>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="item-galeria todos viajes">
+                <div class="imagen-galeria">
+                    <img src="img/dia_de_la_mujer_grupal.jpg" alt="Visita turística">
+                    <div class="overlay-galeria">
+                        <span class="icono-lupa">🔍</span>
+                    </div>
+                </div>
+                <div class="info-galeria">
+                    <h3>Destino Paradisíaco</h3>
+                    <p class="fecha-galeria">Febrero 2024</p>
+                </div>
+            </div>
+
+            <!-- Item 7 -->
+            <div class="item-galeria todos convivios">
+                <div class="imagen-galeria">
+                    <img src="img/dia_de_la_mujer_grupal.jpg" alt="Convivio informal">
+                    <div class="overlay-galeria">
+                        <span class="icono-lupa">🔍</span>
+                    </div>
+                </div>
+                <div class="info-galeria">
+                    <h3>Reunión Casual</h3>
+                    <p class="fecha-galeria">Enero 2024</p>
+                </div>
+            </div>
+
+            <!-- Item 8 -->
+            <div class="item-galeria todos videos">
+                <div class="imagen-galeria video-galeria">
+                    <img src="img/dia_de_la_mujer_grupal.jpg" alt="Tutorial de experiencia">
+                    <div class="play-button">▶</div>
+                    <div class="overlay-galeria">
+                        <span class="icono-lupa">▶</span>
+                    </div>
+                </div>
+                <div class="info-galeria">
+                    <h3>Momentos que Brillan</h3>
+                    <p class="fecha-galeria">Video 3:15</p>
+                </div>
+            </div>
+
+            <!-- Item 9 -->
+            <div class="item-galeria todos eventos">
+                <div class="imagen-galeria">
+                    <img src="img/dia_de_la_mujer_grupal.jpg" alt="Ceremonia especial">
+                    <div class="overlay-galeria">
+                        <span class="icono-lupa">🔍</span>
+                    </div>
+                </div>
+                <div class="info-galeria">
+                    <h3>Ceremonia de Grados</h3>
+                    <p class="fecha-galeria">Diciembre 2023</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="seccion-mas-contenido">
+            <p>¿Quieres ver más? Visita nuestras redes sociales para las galerías completas</p>
+            <a href="redes.html" class="boton boton-amarillo">Ver en Redes</a>
+        </div>
+    </main>
+
+    <footer class="site-footer seccion">
+        <div class="contenedor contenedor-footer">
+            <nav class="navegacion">
+                <a href="index.html">Inicio</a>
+                <a href="medios.html">Medios</a>
+                <a href="blog.html">Blog</a>
+                <a href="redes.html">Redes</a>
+            </nav>
+            <p class="copyrigth">
+                Promo 2026 LITHIUM © Todos los derechos reservados
+            </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
+        <h2 class="fw-300 centrar-texto">Mas sobre Nosotros</h2>
+        <div class="icono-nosotros">
+
+            <div class="icono">
+                <img src="img/icono1.svg" alt="Icono Seguridad">
+                    <h3>Seguridad</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, delectus odit. Omnis deleniti, iure quas error illo soluta, quibusdam inventore unde, recusandae eaque animi obcaecati magnam aperiam quia minima dignissimos.</p>
+            </div>
+            <div class="icono">
+                <img src="img/icono2.svg" alt="Icono Seguridad">
+                    <h3>Costo</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, delectus odit. Omnis deleniti, iure quas error illo soluta, quibusdam inventore unde, recusandae eaque animi obcaecati magnam aperiam quia minima dignissimos.</p>
+            </div>
+            <div class="icono">
+                <img src="img/icono3.svg" alt="Icono Seguridad">
+                    <h3>Tiempo</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, delectus odit. Omnis deleniti, iure quas error illo soluta, quibusdam inventore unde, recusandae eaque animi obcaecati magnam aperiam quia minima dignissimos.</p>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <footer class="site-footer seccion">
+        <div class="contenedor contenedor-footer">
+            <nav class="navegacion">
+                <a href="nosotros.html">Nosotros</a>
+                <a href="anuncios.html">Anuncios</a>
+                <a href="blog.html">Blog</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+            <p class="copyrigth">Todos los derechos Reservados 2026 &copy;</p>
+        </div>
+    </footer>
+</body>
+</html>
