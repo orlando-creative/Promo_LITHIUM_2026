@@ -1,14 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Promo 2026 - LITHIUM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
     <header class="site-header inicio">
+        <!-- Carrusel de Fondo -->
+        <div class="carrusel-fondo">
+            <div class="slide-carrusel active" style="background-image: url('img/dia_de_la_mujer_grupal.jpg');"></div>
+            <div class="slide-carrusel" style="background-image: url('img/dia_de_la_mujer_grupal.jpg');"></div>
+            <div class="slide-carrusel" style="background-image: url('img/dia_de_la_mujer_grupal.jpg');"></div>
+            <div class="slide-carrusel" style="background-image: url('img/dia_de_la_mujer_grupal.jpg');"></div>
+        </div>
+        <!-- Overlay -->
+        <div class="carrusel-overlay"></div>
+        
         <div class="contenedor contenedor-header">
             <div class="barra">
                 <a href="index.html">
@@ -20,106 +31,57 @@
                     </a>
                 </div>
                 <nav id="navegacion" class="navegacion">
-                    <a href="Medios.html">Fotos y Videos</a>
-                    <a href="blog.html">Blog</a>
-                    <a href="Redes.html">Redes Sociales</a>
+                    <a href="medios.html">Galería</a>
+                    <a href="redes.html">Redes</a>
                 </nav>
             </div>
-            <h1>"Las Iluciones Trazadas Hoy Iluminaran un Mañana"</h1>
-        </div>
+            <div class="hero-texto">
+                <h1>Ilumina el mañana con los mejores recuerdos</h1>
+                <p>Galería y redes sociales de nuestra promoción.</p>
+                <a href="medios.html" class="boton boton-amarillo">Ver galería</a>
+            </div>
         </div>
     </header>
 
-    <section class="contenedor seccion">
-        <h2 class="fw-300 centrar-texto">Conoce Nuestra Historia</h2>
-        <div class="icono-nosotros">
+    <script>
+        // Carrusel automático
+        let slideActual = 0;
+        const slides = document.querySelectorAll('.slide-carrusel');
+        
+        function mostrarSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[index].classList.add('active');
+        }
+        
+        function siguienteSlide() {
+            slideActual = (slideActual + 1) % slides.length;
+            mostrarSlide(slideActual);
+        }
+        
+        setInterval(siguienteSlide, 5000); // Cambiar cada 5 segundos
+    </script>
 
-            
-<div class="contenedor-imagenes">
-    <div class="div1"><img src="img/dia_de_la_mujer_grupal.jpg" alt=""></div>
-    <div class="div2"><img src="img/dia_de_la_mujer_grupal.jpg" alt=""></div>
-    <div class="div3"><img src="img/dia_de_la_mujer_grupal.jpg" alt=""></div>
-    <div class="div4"><img src="img/dia_de_la_mujer_grupal.jpg" alt=""></div>
-    <div class="div7"><img src="img/dia_de_la_mujer_grupal.jpg" alt=""></div>
-    <div class="div8"><img src="img/dia_de_la_mujer_grupal.jpg" alt=""></div>
-</div>
-    
-
-    <!-- productos -->
     <main class="contenedor seccion">
-        <h2 class="fw-300 centrar-texto">Nuestras Visitas</h2>
-        <div class="contenedor listado-anuncios">
-
-            <div class="anuncio">
-                <img src="img/anuncio1.jpg" alt="Casa en lago">
-                <div class="contenido-anuncios">
-                    <h3>Casa de lujo en el Lago</h3>
-                    <p>Casa junto al lago con excelente vista y acabados de lujo.</p>
-                    <p class="precio">$3,000,000</p>
-                    <a href="anuncio.html" class="boton boton-amarillo d-block">Ver Propiedad</a>
-                </div>
-            </div>
-
-            <div class="anuncio">
-                <img src="img/anuncio1.jpg" alt="Casa en lago">
-                <div class="contenido-anuncios">
-                    <h3>Casa de lujo en el Lago</h3>
-                    <p>Casa junto al lago con excelente vista y acabados de lujo.</p>
-                    <p class="precio">$3,000,000</p>
-                    <a href="anuncio.html" class="boton boton-amarillo d-block">Ver Propiedad</a>
-                </div>
-            </div>
-
-            <div class="anuncio">
-                <img src="img/anuncio1.jpg" alt="Casa en lago">
-                <div class="contenido-anuncios">
-                    <h3>Casa de lujo en el Lago</h3>
-                    <p>Casa junto al lago con excelente vista y acabados de lujo.</p>
-                    <p class="precio">$3,000,000</p>
-                    <a href="anuncio.html" class="boton boton-amarillo d-block">Ver Propiedad</a>
-                </div>
-            </div>
-
-            <div class="ver-todas">
-                <a href="anuncios.html" class="boton boton-verde">Ver Todas</a>
-            </div>
-        </main>
-
-    <section class="imagen-contacto">
-        <div class="contenedor contenido-contacto">
-            <h2>Un Año de Excelencia</h2>
-            <p>Compartimos momentos inolvidables para formar un futuro de exito.</p>
-            <a href="contacto.html" class="boton boton-amarillo">Ver blog completo</a>
+        <h2 class="fw-300 centrar-texto">Conoce Nuestra Historia</h2>
+        <div class="contenedor-imagenes">
+            <div><img src="img/dia_de_la_mujer_grupal.jpg" alt="Momentos 1"></div>
+            <div><img src="img/dia_de_la_mujer_grupal.jpg" alt="Momentos 2"></div>
+            <div><img src="img/dia_de_la_mujer_grupal.jpg" alt="Momentos 3"></div>
+            <div><img src="img/dia_de_la_mujer_grupal.jpg" alt="Momentos 4"></div>
+            <div><img src="img/dia_de_la_mujer_grupal.jpg" alt="Momentos 5"></div>
+            <div><img src="img/dia_de_la_mujer_grupal.jpg" alt="Momentos 6"></div>
         </div>
-    </section>
-blog
-    <div class="seccion-inferior contenedor">       
-        <section class="blog">
-            <h3 class="centrar-texto fw-300">Experiencias Plasmadas</h3>
+    </main>
 
-            <article class="entrada-blog">
-                <div class="imagen">
-                    <img src="img/blog1.jpg" alt="Blog 1">
-                </div>
-                <div class="texto-entrada">
-                        <p>Escrito el: <span>20/10/2024</span> por: <span>Admin</span></p>
-                        <p>Consejos para construir una terraza en el techo de tu casa con los mejores materiales y ahorrando dinero</p>
-                </div>
-            </article>
-            
-        </section>
-
-    </div>
-<footer class="site-footer seccion">
+    <footer class="site-footer seccion">
     <div class="contenedor contenedor-footer">
         <nav class="navegacion">
-            <a href="nosotros.html">Nosotros</a>
-            <a href="anuncios.html">Anuncios</a>
-            <a href="blog.html">Blog</a>
-            <a href="contacto.html">Contacto</a>
+            <a href="index.html">Inicio</a>
+            <a href="medios.html">Galería</a>
+            <a href="redes.html">Redes</a>
         </nav>
         <p class="copyrigth">
-            Todos los derechos Reservados 2026 &copy;
+            Todos los derechos reservados 2026 ©
         </p>
     </div>
 </footer>

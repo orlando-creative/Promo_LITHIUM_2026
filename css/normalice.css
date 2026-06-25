@@ -1,0 +1,59 @@
+/* Páginas INTERNAS - Nosotros */
+@media (min-width: 768px) {
+    .contenido-nosotros {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 2rem;
+        text-align: justify;
+    }
+}
+
+.texto-nosotros blockquote {
+    font-weight: 900;
+    font-size: 2rem;
+    margin: 0;
+    padding: 1rem 0 3rem 0;
+}
+
+/* Contactos */
+form p {
+    font-size: 1.2rem;
+}
+
+legend {
+    font-size: 2.4rem;
+    color: var(--secondary-color); /* Aplicando variable de color */
+}
+
+label {
+    display: block;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+input:not([type="submit"]),
+textarea,
+select {
+    padding: 1rem;
+    display: block;
+    width: 100%;
+    background-color: var(--background-color-sec); /* Aplicando variable de color */
+    margin-bottom: 2rem;
+    border: none;
+    border-radius: 1rem;
+    color: var(--text-color); /* Aplicando variable de color */
+}
+
+input[type="radio"] {
+    width: auto;
+    margin: 0;
+}
+
+select {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+textarea {
+    height: 20rem;
+}
