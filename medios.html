@@ -32,89 +32,10 @@
         <h1 class="titulo-vintage centrar-texto">Galería de Fotos y Videos</h1>
         <p class="subtitulo-vintage centrar-texto">Revive los mejores momentos de nuestra promoción</p>
 
-        <!-- Galería -->
-        <div class="galeria-grid">
-            <!-- Fila 1 -->
-            <div class="galeria-item item-grande">
-                <img src="img/1.jpg" alt="Evento 1">
-                <div class="galeria-overlay">
-                    <h3>Dia del Niño</h3>
-                </div>
-            </div>
-            <div class="galeria-item">
-                <img src="img/2.jpg" alt="Evento 2">
-                <div class="galeria-overlay">
-                    <h3>Viaje Aventura</h3>
-                </div>
-            </div>
-            <div class="galeria-item">
-                <img src="img/10.jpg" alt="Evento 3">
-                <div class="galeria-overlay">
-                    <h3>Convivio 2026</h3>
-                </div>
-            </div>
 
-            <!-- Fila 2 -->
-            <div class="galeria-item">
-                <img src="img/4.jpg" alt="Evento 4">
-                <div class="galeria-overlay">
-                    <h3>Reunión Oficial</h3>
-                </div>
-            </div>
-            <div class="galeria-item item-grande">
-                <img src="img/dia_de_la_mujer_grupal.jpg" alt="Evento 5">
-                <div class="galeria-overlay">
-                    <h3>Momentos Únicos</h3>
-                </div>
-            </div>
-            <div class="galeria-item">
-                <img src="img/dia_de_la_mujer_grupal.jpg" alt="Evento 6">
-                <div class="galeria-overlay">
-                    <h3>Celebración</h3>
-                </div>
-            </div>
 
-            <!-- Fila 3 -->
-            <div class="galeria-item">
-                <img src="img/dia_de_la_mujer_grupal.jpg" alt="Evento 7">
-                <div class="galeria-overlay">
-                    <h3>Experiencia Grupal</h3>
-                </div>
-            </div>
-            <div class="galeria-item">
-                <img src="img/dia_de_la_mujer_grupal.jpg" alt="Evento 8">
-                <div class="galeria-overlay">
-                    <h3>Diversión</h3>
-                </div>
-            </div>
-            <div class="galeria-item item-grande">
-                <img src="img/dia_de_la_mujer_grupal.jpg" alt="Evento 9">
-                <div class="galeria-overlay">
-                    <h3>Recuerdos Imperecederos</h3>
-                </div>
-            </div>
+        <div id="galeria-grid" class="galeria-grid"></div>
 
-            <!-- Fila 4 -->
-            <div class="galeria-item item-grande">
-                <img src="img/dia_de_la_mujer_grupal.jpg" alt="Evento 10">
-                <div class="galeria-overlay">
-                    <h3>Unión y Amistad</h3>
-                </div>
-            </div>
-            <div class="galeria-item">
-                <img src="img/dia_de_la_mujer_grupal.jpg" alt="Evento 11">
-                <div class="galeria-overlay">
-                    <h3>Momentos</h3>
-                </div>
-            </div>
-            <div class="galeria-item">
-                <img src="img/dia_de_la_mujer_grupal.jpg" alt="Evento 12">
-                <div class="galeria-overlay">
-                    <h3>Felicidad</h3>
-                </div>
-            </div>
-        </div>
-        <!-- Lightbox Modal -->
         <div id="lightbox" class="lightbox" aria-hidden="true">
             <button class="lightbox-close" aria-label="Cerrar">×</button>
             <button class="lightbox-prev" aria-label="Anterior">‹</button>
@@ -124,65 +45,19 @@
             </div>
             <button class="lightbox-next" aria-label="Siguiente">›</button>
         </div>
-
-        <script>
-            (function(){
-                const items = document.querySelectorAll('.galeria-item');
-                const lightbox = document.getElementById('lightbox');
-                const lbImg = lightbox.querySelector('.lightbox-img');
-                const lbCaption = lightbox.querySelector('.lightbox-caption');
-                const btnClose = lightbox.querySelector('.lightbox-close');
-                const btnNext = lightbox.querySelector('.lightbox-next');
-                const btnPrev = lightbox.querySelector('.lightbox-prev');
-                let currentIndex = 0;
-
-                function openLightbox(index){
-                    const item = items[index];
-                    const img = item.querySelector('img');
-                    const captionEl = item.querySelector('.galeria-overlay h3');
-                    lbImg.src = img.src;
-                    lbImg.alt = img.alt || '';
-                    lbCaption.textContent = captionEl ? captionEl.textContent : '';
-                    lightbox.classList.add('open');
-                    lightbox.setAttribute('aria-hidden','false');
-                    currentIndex = index;
-                }
-
-                function closeLightbox(){
-                    lightbox.classList.remove('open');
-                    lightbox.setAttribute('aria-hidden','true');
-                }
-
-                function showNext(){
-                    openLightbox((currentIndex + 1) % items.length);
-                }
-
-                function showPrev(){
-                    openLightbox((currentIndex - 1 + items.length) % items.length);
-                }
-
-                items.forEach((it, i) => {
-                    it.addEventListener('click', () => openLightbox(i));
-                });
-
-                btnClose.addEventListener('click', closeLightbox);
-                btnNext.addEventListener('click', showNext);
-                btnPrev.addEventListener('click', showPrev);
-
-                lightbox.addEventListener('click', (e) => {
-                    if (e.target === lightbox) closeLightbox();
-                });
-
-                document.addEventListener('keydown', (e) => {
-                    if (lightbox.classList.contains('open')){
-                        if (e.key === 'Escape') closeLightbox();
-                        if (e.key === 'ArrowRight') showNext();
-                        if (e.key === 'ArrowLeft') showPrev();
-                    }
-                });
-            })();
-        </script>
-
+        
+        <div class="formulario-subida" style="max-width: 500px; margin: 0 auto 40px auto; padding: 20px; border: 1px solid #ccc; border-radius: 8px; text-align: center;">
+            <h3 style="margin-top: 0;">Añadir Foto a la Galería</h3>
+            <form id="form-subir-foto">
+                <input type="text" id="input-titulo" placeholder="Título del recuerdo (Ej: Convivio)" required style="width: 100%; padding: 8px; margin-bottom: 10px; box-sizing: border-box;">
+                <input type="file" id="input-archivo" accept="image/*" required style="width: 100%; margin-bottom: 10px;">
+                <label style="display: block; margin-bottom: 15px;">
+                    <input type="checkbox" id="input-grande"> ¿Destacar como imagen grande?
+                </label>
+                <button type="submit" id="btn-subir" class="boton boton-amarillo" style="width: 100%; cursor: pointer;">Subir Foto</button>
+            </form>
+            <p id="mensaje-estado" style="margin-top: 10px; font-weight: bold;"></p>
+        </div>
         <div class="seccion-mas-contenido">
             <p>¿Quieres ver más? Visita nuestras redes sociales para las galerías completas</p>
             <a href="redes.html" class="boton boton-amarillo">Ver en Redes</a>
@@ -201,5 +76,7 @@
             </p>
         </div>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
